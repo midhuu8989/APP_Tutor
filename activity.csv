@@ -1,38 +1,99 @@
-Topic,Scenario,Task,Output
-Python EDA,"As a data analyst in a bank, I want to analyze transaction data to identify inconsistencies so that reporting is accurate.","Load dataset, check null values, duplicates, data types, and summary stats",Cleaned dataset + summary report
-Python EDA,"As a risk analyst, I want to understand customer spending patterns to detect unusual behavior.","Perform univariate & bivariate analysis (histograms, boxplots, correlations)",Visualization dashboard + insights
-Python EDA,"As a fraud analyst, I want to explore transaction frequency across time to identify suspicious spikes.",Analyze time-series trends using groupby (date/time),Line charts showing spikes
-Python EDA,"As a product manager, I want to segment customers based on balance and transactions.",Use descriptive stats and grouping to categorize customers,"Customer segments (low, medium, high value)"
-Python EDA,"As a compliance officer, I want to identify outliers in transactions to flag anomalies.",Detect outliers using IQR or Z-score,List of flagged transactions
-Machine Learning,"As a loan officer, I want to predict whether a loan should be approved to reduce risk.",Train classification model (Logistic Regression / RandomForest),"Accuracy, Precision, Recall"
-Machine Learning,"As a fraud detection team member, I want to detect fraudulent transactions automatically.",Train model on labeled fraud dataset,Confusion matrix + fraud predictions
-Machine Learning,"As a marketing analyst, I want to predict customer churn to retain users.",Build classification model + feature importance,Important features + prediction results
-Machine Learning,"As a bank manager, I want to estimate customer lifetime value.",Build regression model,Predicted customer value
-Machine Learning,"As an operations team member, I want to classify customer complaints into categories.",Train classification model,Predicted categories
-NLP,"As a customer support manager, I want to analyze customer complaints to understand sentiment.",Perform sentiment analysis using TextBlob/VADER,Positive/Negative/Neutral labels
-NLP,"As a banking analyst, I want to extract key topics from complaints.",Apply topic modeling (LDA),List of topics
-NLP,"As a chatbot developer, I want to preprocess text data for better model performance.","Tokenization, stopword removal, stemming",Cleaned text dataset
-NLP,"As a compliance officer, I want to detect keywords related to fraud or risk.",Keyword extraction (TF-IDF),Important keywords
-NLP,"As a service team, I want to classify customer emails into categories.",Train text classifier,Email categories
-LLM,"As a banking assistant, I want to generate responses to customer queries professionally.",Use LLM to generate responses,Formal response text
-LLM,"As a training manager, I want to summarize long financial reports.",Use LLM summarization,Short summary
-LLM,"As a compliance officer, I want to simplify legal documents for customers.",Prompt LLM to explain simply,Simplified explanation
-LLM,"As a relationship manager, I want to generate personalized emails to customers.",Prompt-based email generation,Personalized email
-LLM,"As a knowledge manager, I want to answer internal banking FAQs.",Build Q&A system using LLM,Accurate answers
-Agentic AI,"As a bank user, I want an AI agent to track my expenses and alert overspending.",Monitor transactions + trigger alerts,Spending alerts
-Agentic AI,"As a loan applicant, I want an AI agent to suggest best loan options.",Analyze profile → suggest loans,Loan recommendations
-Agentic AI,"As a portfolio manager, I want an agent to rebalance investments automatically.",Fetch market data + rebalance portfolio,Investment plan
-Agentic AI,"As a fraud analyst, I want an AI agent to investigate suspicious transactions.",Gather data → evaluate risk → flag fraud,Fraud alert report
-Agentic AI,"As a customer, I want an AI assistant to handle all banking queries end-to-end.",Use LLM + DB + APIs,Automated responses + actions
+Topic,Scenario,Dataset,Task,Output
+Python EDA,"Analyze missing values in customer transactions","customer_id,amount
+101,5000
+102,
+103,7000","Load dataset and find null values",Null report
+Python EDA,"Understand distribution of transaction amounts","amount
+1000
+2000
+5000
+7000","Plot histogram",Distribution chart
+Python EDA,"Detect duplicate transactions","txn_id,amount
+1,5000
+2,7000
+2,7000","Find duplicates",Duplicate rows
+Python EDA,"Analyze correlation between balance and spend","balance,spend
+50000,5000
+60000,7000
+30000,2000","Calculate correlation",Correlation value
+Python EDA,"Identify outliers in transactions","amount
+1000
+2000
+5000
+100000","Use IQR method",Outliers list
 
-Feature Engineering,"As a data scientist, I want to handle missing values to improve model performance.","Impute missing values using mean/median/mode",Clean dataset with no null values
-Feature Engineering,"As a risk analyst, I want to convert categorical variables into numeric format for modeling.",Apply encoding (Label Encoding / One-Hot Encoding),Encoded dataset
-Feature Engineering,"As a data analyst, I want to scale features to ensure uniform contribution.",Apply normalization/standardization,Scaled dataset
-Feature Engineering,"As a fraud analyst, I want to create new features from transaction data to improve detection.","Feature creation (transaction frequency, avg spend)",New feature columns
-Feature Engineering,"As a ML engineer, I want to select important features to reduce model complexity.","Feature selection (correlation, feature importance)",Reduced feature set
+Feature Engineering,"Create transaction velocity feature","cust_id,amount,time
+101,5000,10:00
+101,7000,10:20
+101,2000,11:00","Groupby + rolling count",transaction_velocity column
+Feature Engineering,"Calculate average spend per customer","cust_id,amount
+101,5000
+101,7000
+102,10000","Groupby mean",avg_spend column
+Feature Engineering,"Compute debt-to-income ratio","cust_id,income,loan
+101,50000,20000
+102,60000,10000","Create ratio feature",DTI column
+Feature Engineering,"Encode categorical account type","cust_id,type
+101,savings
+102,current","Apply one-hot encoding",Encoded columns
+Feature Engineering,"Scale transaction amount","amount
+1000
+2000
+5000
+7000","Apply normalization",Scaled values
 
-Python,"As a beginner programmer, I want to understand basic syntax to write programs.","Variables, data types, input/output",Simple Python program
-Python,"As a banking analyst, I want to automate calculations using loops.","Use for/while loops for repetitive tasks",Automated calculation output
-Python,"As a developer, I want to store and manage data efficiently.","Use lists, tuples, dictionaries",Structured data storage
-Python,"As a data analyst, I want to process datasets efficiently.","Use functions and list comprehensions",Reusable code blocks
-Python,"As a backend developer, I want to handle errors in programs.","Apply exception handling (try/except)",Robust program without crashes
+Python,"Filter high-value transactions","txn_id,amount
+1,5000
+2,150000
+3,20000","Use condition amount > 100000",Filtered list
+Python,"Calculate daily totals","date,amount
+2024-01-01,5000
+2024-01-01,7000","Group or loop sum",Daily total
+Python,"Detect duplicate entries","txn_id,amount
+1,5000
+2,7000
+2,7000","Use pandas duplicates",Duplicate rows
+Python,"Handle invalid input","input: age='abc'","Use try-except",Handled error
+Python,"Flag low balance customers","cust_id,balance
+101,500
+102,15000","Condition balance < 1000",Alert list
+
+Machine Learning,"Predict loan approval","income,loan,approved
+50000,20000,1
+30000,25000,0","Train classifier",Prediction results
+Machine Learning,"Detect fraud transactions","amount,label
+5000,0
+200000,1","Train model",Fraud predictions
+Machine Learning,"Predict churn","usage,churn
+10,0
+2,1","Train model",Churn prediction
+Machine Learning,"Estimate customer value","transactions,value
+10,50000
+5,20000","Train regression",Predicted value
+Machine Learning,"Classify complaints","text,label
+'bad service',complaint
+'good app',feedback","Train classifier",Categories
+
+NLP,"Perform sentiment analysis","text
+'bad service'
+'great support'","Apply sentiment model",Sentiment labels
+NLP,"Extract keywords","text
+'fraud detected in account'","Apply TF-IDF",Keywords
+NLP,"Tokenize text","text
+'bank account blocked'","Tokenization",Tokens list
+NLP,"Remove stopwords","text
+'this is a bank account'","Remove stopwords",Clean text
+NLP,"Classify emails","text,label
+'loan issue',complaint","Train classifier",Predicted label
+
+LLM,"Generate customer response","Query: loan info","Prompt LLM",Generated text
+LLM,"Summarize report","Long financial text","LLM summarization",Short summary
+LLM,"Simplify legal text","Complex policy text","Simplify using LLM",Simple explanation
+LLM,"Generate email","Customer name + offer","Prompt LLM",Email text
+LLM,"Answer FAQ","Bank FAQ dataset","Build Q&A",Answer output
+
+Agentic AI,"Track expenses","transaction stream","Monitor and alert",Alert output
+Agentic AI,"Suggest loan","customer profile","Analyze + suggest",Loan options
+Agentic AI,"Rebalance portfolio","market + portfolio data","Auto adjust",Investment plan
+Agentic AI,"Investigate fraud","transaction + history","Analyze + flag",Fraud report
+Agentic AI,"Automate banking queries","user query + DB","LLM + tools",Automated action
