@@ -1,0 +1,61 @@
+S.no,Topic,Question,Option1,Option2,Option3,Option4,Correct Answer
+1,EDA,What is the first step after loading a dataset?,Train model,Check missing values,Deploy model,Save file,Check missing values
+2,EDA,Which function is used to view first 5 rows?,tail(),info(),head(),describe(),head()
+3,EDA,What does isnull().sum() show?,Duplicate values,Missing values count,Mean values,Data types,Missing values count
+4,EDA,Which plot is best for distribution?,Bar chart,Histogram,Pie chart,Line chart,Histogram
+5,EDA,Outliers can be detected using:,Mean,IQR,Count,Mode,IQR
+6,EDA,Correlation shows:,Missing data,Relationship between variables,Dataset size,Data types,Relationship between variables
+7,EDA,Which function summarizes numeric data?,info(),describe(),shape(),columns(),describe()
+8,EDA,Duplicate rows can be removed using:,dropna(),remove(),drop_duplicates(),delete(),drop_duplicates()
+9,EDA,Boxplot helps in:,Trend analysis,Outlier detection,Data cleaning,Feature selection,Outlier detection
+10,EDA,Groupby is used for:,Filtering,Aggregation,Sorting,Removing nulls,Aggregation
+11,Machine Learning,Machine learning is:,Hardcoding rules,Learning from data,Manual analysis,Data storage,Learning from data
+12,Machine Learning,Supervised learning uses:,Unlabeled data,Labeled data,Random data,No data,Labeled data
+13,Machine Learning,Which is classification?,Predict price,Predict yes/no,Predict age,Predict salary,Predict yes/no
+14,Machine Learning,Which algorithm is for classification?,Linear Regression,Logistic Regression,PCA,K-Means,Logistic Regression
+15,Machine Learning,Accuracy measures:,Error rate,Correct predictions,Speed,Memory,Correct predictions
+16,Machine Learning,Overfitting means:,Model too simple,Model too complex,No training,No testing,Model too complex
+17,Machine Learning,Train-test split is used for:,Cleaning,Evaluation,Visualization,Storage,Evaluation
+18,Machine Learning,Which is regression?,Fraud detection,Loan approval,Price prediction,Spam detection,Price prediction
+19,Machine Learning,Confusion matrix is used for:,Regression,Classification evaluation,Data cleaning,Visualization,Classification evaluation
+20,Machine Learning,Feature importance tells:,Model speed,Important variables,Data size,Accuracy,Important variables
+21,NLP,NLP stands for:,Neural Learning Process,Natural Language Processing,New Learning Protocol,Network Language Program,Natural Language Processing
+22,NLP,Tokenization means:,Removing words,Splitting text,Translating,Summarizing,Splitting text
+23,NLP,Stopwords are:,Important words,"Common words (is, the)",Rare words,Numbers,"Common words (is, the)"
+24,NLP,Stemming does:,Expand words,Reduce to root form,Translate,Classify,Reduce to root form
+25,NLP,Sentiment analysis detects:,Language,Emotion,Grammar,Length,Emotion
+26,NLP,TF-IDF is used for:,Cleaning,Keyword importance,Translation,Visualization,Keyword importance
+27,NLP,NLP is used in:,Images,Text data,Audio only,Numbers,Text data
+28,NLP,Named Entity Recognition identifies:,Numbers,"Names, places",Stopwords,Sentences,"Names, places"
+29,NLP,Bag of Words represents:,Images,Text frequency,Audio,Video,Text frequency
+30,NLP,Chatbots use:,NLP,Only ML,Only DB,Excel,NLP
+31,LLM,LLM stands for:,Large Language Model,Long Learning Model,Logical Language Machine,Linear Learning Model,Large Language Model
+32,LLM,LLMs are trained on:,Small data,Large text data,Images only,Numbers only,Large text data
+33,LLM,Prompt means:,Output,Input instruction,Model,Dataset,Input instruction
+34,LLM,LLM can:,Only calculate,Generate text,Store files,Clean data,Generate text
+35,LLM,Example use:,Sorting,Chatbot,Printing,Saving,Chatbot
+36,LLM,Temperature controls:,Speed,Creativity,Size,Accuracy,Creativity
+37,LLM,Hallucination means:,Correct output,Wrong/generated info,Missing data,Cleaning,Wrong/generated info
+38,LLM,Few-shot prompting means:,No examples,Some examples,Full dataset,No prompt,Some examples
+39,LLM,LLM limitation:,Too fast,Can give incorrect answers,Cannot generate text,Cannot learn,Can give incorrect answers
+40,LLM,GPT is a:,Database,LLM,API,Tool,LLM
+41,Agentic AI,Agentic AI means:,Static system,Autonomous system,Manual system,Offline system,Autonomous system
+42,Agentic AI,AI agent can:,Only respond,Take actions,Store data,Print data,Take actions
+43,Agentic AI,Agent uses:,Only DB,Tools + LLM,Only ML,Only UI,Tools + LLM
+44,Agentic AI,Multi-step reasoning means:,Single answer,Step-by-step thinking,Random output,No logic,Step-by-step thinking
+45,Agentic AI,Example agent task:,Sorting,Loan recommendation,Printing,Saving,Loan recommendation
+46,Agentic AI,Agent workflow includes:,Think → Act → Observe,Run → Stop,Load → Save,Open → Close,Think → Act → Observe
+47,Agentic AI,Tool in agent means:,Hammer,API/function,Dataset,Model,API/function
+48,Agentic AI,Agent memory helps in:,Storage,Context retention,Speed,UI,Context retention
+49,Agentic AI,Agent differs from chatbot because:,Same,Takes actions,Only text,Only UI,Takes actions
+50,Agentic AI,Real-world use:,Gaming,Banking assistant,Typing,Drawing,Banking assistant
+51,Feature Engineering,What is the purpose of feature scaling?,Improve model accuracy,Reduce dataset size,Remove duplicates,Visualize data,Improve model accuracy
+52,Feature Engineering,Which method is used to handle missing values?,Encoding,Imputation,Normalization,Clustering,Imputation
+53,Feature Engineering,What does One-Hot Encoding do?,Removes columns,Converts categories into binary columns,Scales data,Finds correlation,Converts categories into binary columns
+54,Feature Engineering,Which technique helps in reducing number of features?,Feature creation,Feature selection,Normalization,Encoding,Feature selection
+55,Feature Engineering,What is normalization used for?,Handling missing values,Scaling features between range,Encoding text,Removing duplicates,Scaling features between range
+56,Python,Which data type is used to store multiple values in one variable?,int,list,float,string,list
+57,Python,Which loop is used when the number of iterations is known?,while,for,if,try,for
+58,Python,What does try-except block handle?,Loops,Errors,Functions,Variables,Errors
+59,Python,Which keyword is used to define a function in Python?,func,define,def,function,def
+60,Python,Which data structure stores key-value pairs?,list,tuple,set,dictionary,dictionary

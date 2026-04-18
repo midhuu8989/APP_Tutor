@@ -1,0 +1,38 @@
+Topic,Scenario,Task,Output
+Python EDA,"As a data analyst in a bank, I want to analyze transaction data to identify inconsistencies so that reporting is accurate.","Load dataset, check null values, duplicates, data types, and summary stats",Cleaned dataset + summary report
+Python EDA,"As a risk analyst, I want to understand customer spending patterns to detect unusual behavior.","Perform univariate & bivariate analysis (histograms, boxplots, correlations)",Visualization dashboard + insights
+Python EDA,"As a fraud analyst, I want to explore transaction frequency across time to identify suspicious spikes.",Analyze time-series trends using groupby (date/time),Line charts showing spikes
+Python EDA,"As a product manager, I want to segment customers based on balance and transactions.",Use descriptive stats and grouping to categorize customers,"Customer segments (low, medium, high value)"
+Python EDA,"As a compliance officer, I want to identify outliers in transactions to flag anomalies.",Detect outliers using IQR or Z-score,List of flagged transactions
+Machine Learning,"As a loan officer, I want to predict whether a loan should be approved to reduce risk.",Train classification model (Logistic Regression / RandomForest),"Accuracy, Precision, Recall"
+Machine Learning,"As a fraud detection team member, I want to detect fraudulent transactions automatically.",Train model on labeled fraud dataset,Confusion matrix + fraud predictions
+Machine Learning,"As a marketing analyst, I want to predict customer churn to retain users.",Build classification model + feature importance,Important features + prediction results
+Machine Learning,"As a bank manager, I want to estimate customer lifetime value.",Build regression model,Predicted customer value
+Machine Learning,"As an operations team member, I want to classify customer complaints into categories.",Train classification model,Predicted categories
+NLP,"As a customer support manager, I want to analyze customer complaints to understand sentiment.",Perform sentiment analysis using TextBlob/VADER,Positive/Negative/Neutral labels
+NLP,"As a banking analyst, I want to extract key topics from complaints.",Apply topic modeling (LDA),List of topics
+NLP,"As a chatbot developer, I want to preprocess text data for better model performance.","Tokenization, stopword removal, stemming",Cleaned text dataset
+NLP,"As a compliance officer, I want to detect keywords related to fraud or risk.",Keyword extraction (TF-IDF),Important keywords
+NLP,"As a service team, I want to classify customer emails into categories.",Train text classifier,Email categories
+LLM,"As a banking assistant, I want to generate responses to customer queries professionally.",Use LLM to generate responses,Formal response text
+LLM,"As a training manager, I want to summarize long financial reports.",Use LLM summarization,Short summary
+LLM,"As a compliance officer, I want to simplify legal documents for customers.",Prompt LLM to explain simply,Simplified explanation
+LLM,"As a relationship manager, I want to generate personalized emails to customers.",Prompt-based email generation,Personalized email
+LLM,"As a knowledge manager, I want to answer internal banking FAQs.",Build Q&A system using LLM,Accurate answers
+Agentic AI,"As a bank user, I want an AI agent to track my expenses and alert overspending.",Monitor transactions + trigger alerts,Spending alerts
+Agentic AI,"As a loan applicant, I want an AI agent to suggest best loan options.",Analyze profile → suggest loans,Loan recommendations
+Agentic AI,"As a portfolio manager, I want an agent to rebalance investments automatically.",Fetch market data + rebalance portfolio,Investment plan
+Agentic AI,"As a fraud analyst, I want an AI agent to investigate suspicious transactions.",Gather data → evaluate risk → flag fraud,Fraud alert report
+Agentic AI,"As a customer, I want an AI assistant to handle all banking queries end-to-end.",Use LLM + DB + APIs,Automated responses + actions
+
+Feature Engineering,"As a data scientist, I want to handle missing values to improve model performance.","Impute missing values using mean/median/mode",Clean dataset with no null values
+Feature Engineering,"As a risk analyst, I want to convert categorical variables into numeric format for modeling.",Apply encoding (Label Encoding / One-Hot Encoding),Encoded dataset
+Feature Engineering,"As a data analyst, I want to scale features to ensure uniform contribution.",Apply normalization/standardization,Scaled dataset
+Feature Engineering,"As a fraud analyst, I want to create new features from transaction data to improve detection.","Feature creation (transaction frequency, avg spend)",New feature columns
+Feature Engineering,"As a ML engineer, I want to select important features to reduce model complexity.","Feature selection (correlation, feature importance)",Reduced feature set
+
+Python,"As a beginner programmer, I want to understand basic syntax to write programs.","Variables, data types, input/output",Simple Python program
+Python,"As a banking analyst, I want to automate calculations using loops.","Use for/while loops for repetitive tasks",Automated calculation output
+Python,"As a developer, I want to store and manage data efficiently.","Use lists, tuples, dictionaries",Structured data storage
+Python,"As a data analyst, I want to process datasets efficiently.","Use functions and list comprehensions",Reusable code blocks
+Python,"As a backend developer, I want to handle errors in programs.","Apply exception handling (try/except)",Robust program without crashes
