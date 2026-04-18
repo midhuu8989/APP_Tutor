@@ -118,11 +118,18 @@ filtered_quiz = quiz_df[quiz_df["Topic"] == selected_topic]
 st.subheader("🛠️ Learning Activities")
 
 for _, row in filtered_activities.iterrows():
+
+    # ✅ NEW FIX: Dataset display (only addition)
+    dataset_display = ""
+    if "Dataset" in activity_df.columns and pd.notna(row.get("Dataset", "")):
+        dataset_display = f"<br><br><b>📊 Sample Dataset:</b><br><pre>{row['Dataset']}</pre>"
+
     st.markdown(f"""
     <div class="card">
     <b>📌 Scenario:</b> {row['Scenario']}<br><br>
     <b>🧪 Task:</b> {row['Task']}<br><br>
     <b>🎯 Output:</b> {row['Output']}
+    {dataset_display}
     </div>
     """, unsafe_allow_html=True)
 
