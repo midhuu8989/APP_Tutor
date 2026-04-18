@@ -1,22 +1,22 @@
 Topic,Scenario,Dataset,Task,Output
-Python EDA,"Analyze missing values in customer transactions","customer_id,amount
+EDA,"Analyze missing values in customer transactions","customer_id,amount
 101,5000
 102,
 103,7000","Load dataset and find null values",Null report
-Python EDA,"Understand distribution of transaction amounts","amount
+EDA,"Understand distribution of transaction amounts","amount
 1000
 2000
 5000
 7000","Plot histogram",Distribution chart
-Python EDA,"Detect duplicate transactions","txn_id,amount
+EDA,"Detect duplicate transactions","txn_id,amount
 1,5000
 2,7000
 2,7000","Find duplicates",Duplicate rows
-Python EDA,"Analyze correlation between balance and spend","balance,spend
+EDA,"Analyze correlation between balance and spend","balance,spend
 50000,5000
 60000,7000
 30000,2000","Calculate correlation",Correlation value
-Python EDA,"Identify outliers in transactions","amount
+EDA,"Identify outliers in transactions","amount
 1000
 2000
 5000
